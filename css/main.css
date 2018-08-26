@@ -2911,3 +2911,8 @@ h6 {
   background-color:#383838;
   border-radius: 50%;
 }
+@media (max-width: 900px) {
+.mob-center{
+  text-align: center;
+}
+}
