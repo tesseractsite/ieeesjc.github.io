@@ -1894,7 +1894,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 992px) {
   .navbar-nav {
     height: auto;
-    max-height: 400px;
+    max-height: 600px;
     overflow-x: hidden;
   }
 }
@@ -1942,7 +1942,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10px;
   }
   .navbar-nav a {
-    padding: 0;
+    padding: 15;
   }
   .navbar-nav li {
     padding: 15px 0;
@@ -1989,9 +1989,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0px 0px;
   }
 }
+@media (max-width: 900px) {
+.mob-center{
+  text-align: center;
 
+}
+}
 .section-gap {
-  padding: 120px 0;
+  padding: 90px 0;
 }
 
 .section-title {
@@ -2010,6 +2015,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
   .section-title p br {
     display: none;
+
   }
 }
 
@@ -2209,7 +2215,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991px) {
-  .banner-content h1 br {
+  .banner-content h1 br {#336dff
     display: none;
   }
 }
@@ -2222,24 +2228,29 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 800px) {
   .banner-content h1 {
-    margin-top: 60px;
+    font-size: 25px;
   }
 }
-
+@media (max-width: 800px) {
+  .banner-content h2 {
+    font-size: 20px;
+  }
+}
 .header-btn {
-  background-color: #fff;
+  background-color:#336dff;
   border: 1px solid transparent;
-  color: #000;
+  color: #ffffff;
 }
 
 .header-btn:hover {
-  border: 1px solid #fff;
-  background: transparent;
-  color: #fff;
+  border: 1px solid #ffffff;
+  background: white;
+  color: #000000;
 }
 
 .single-service {
   text-align: center;
+  padding-top: 30px;
 }
 
 .single-service p {
@@ -2272,6 +2283,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 800px) {
   .single-service {
     margin-bottom: 50px;
+  
   }
 }
 
@@ -2911,18 +2923,3 @@ h6 {
   background-color:#383838;
   border-radius: 50%;
 }
-@media (max-width: 900px) {
-.mob-center{
-  text-align: center;
-}
-}
-
-	.bgimg-1 {
-	        height: 100%;
-	        width: 100%;
-	        background-size: 100% 100%;
-	        background: url("sb2.jpg");
-	        background-position: center;
-	        background-repeat: repeat;
-
-	    }
