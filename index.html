@@ -4,9 +4,9 @@
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/home_logo.png">
+	<link rel="shortcut icon" href="img/fav.png">
 	<!-- Author Meta -->
-	<meta name="author" content="Shinu Shaju">
+	<meta name="author" content="colorlib">
 	<!-- Meta Description -->
 	<meta name="description" content="">
 	<!-- Meta Keyword -->
@@ -14,7 +14,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>IEEE SJCET SB</title>
+	<title>Seo</title>
 
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
@@ -41,24 +41,61 @@
                     )
                     wow.init();
 						 </script>
-<style>
+
+					 	<script>
+					 	//bar
+					 	function myFunction2(x) {
+					 	    x.classList.toggle("change");
+					 	}
+					 	</script>
+
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<style>
 	.bgimg-1 {
-	       	background: url("sb2.jpg") no-repeat center center ; 
+
+		background: url("sb4.jpg") no-repeat center center ;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+margin-top: 0;
 
 	    }
+			.containermin {
+			    display: inline-block;
+			    cursor: pointer;
+			}
+
+			.bar1, .bar2, .bar3 {
+			    width: 20px;
+			    height: 2px;
+					padding: 0;
+			    background-color:#232323;
+			    margin: 6px 0;
+			    transition: 0.4s;
+			}
+
+			.change .bar1 {
+			    -webkit-transform: rotate(-45deg) translate(-9px, 4px);
+			    transform: rotate(-45deg) translate(-5px, 7px);
+			}
+
+			.change .bar2 {opacity: 0;}
+
+			.change .bar3 {
+			    -webkit-transform: rotate(45deg) translate(0px, 0px);
+			    transform: rotate(45deg) translate(-4px, -6px);
+			}
+
 	</style>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
+<body>
 
 		<!-- Start Header Area -->
 
 		<header class="default-header">
-			<div class="menutop-wrap" >
+			<!--<div class="menutop-wrap" >
 				<div class="menu-top container">
 					<div class="d-flex justify-content-between align-items-center" >
 						<ul class="list"><center>
@@ -66,20 +103,24 @@ background-size: cover;
 							<a href="#">Access myIEEE</a>&ensp;|
 							<a href="#">IEEE Xplore Digital Library</a>&ensp;|
 							<a href="#">IEEE Standards</a>&ensp;|
-							<a href="#">IEEE Spectrum</a>&ensp;|
-							<a href="#">IEEE Region 10</a>&ensp;|
-							<a href="#">IEEE LINK</a>
+							<a href="#">IEEE Spectrum</a>
 								</ul>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<nav class="navbar navbar-expand-lg  navbar-light">
 				<div class="container">
 						<!--<a class="navbar-brand" href="index.html">
 							<img src="img/logo.png" alt="">
 						</a>--><h4 style="white-space:nowrap;">IEEE SB SJCET</h4>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction2(this)">
+							<!--<span class="navbar-toggler-icon"></span>-->
+							<div class="containermin">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
 						</button>
 
 						<div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
@@ -89,7 +130,7 @@ background-size: cover;
 							<a href="#societies">Societies & Chapters</a></li>
 							<a href="#events">Events</a></li>
 							<a href="#execom">Execom 2018-19</a></li>
-							<a href="#dues">Membership Dues 2019</a></li>
+							<a href="#dues">Membership Dues</a></li>
 							<a href="#contact">Contact Us</a></li>
 							 <!-- Dropdown
 								<li class="dropdown">
@@ -108,27 +149,8 @@ background-size: cover;
 		</header>
 		<!-- End Header Area -->
 
-		<!-- start banner Area -->
-				<section class="bgimg-1 wow fadeIn" data-wow-delay="0.4s">
-	<div id="particles-j"></div><center>
-	<div class="container">
-		<div class="fullscreen d-flex align-items-center justify-content-center">
-			<div class="banner-content ">
-				<h1 class="text-uppercase wow fadeInDown" style="white-space:nowrap;" data-wow-delay="0.7s" style="color:white;">
-					IEEE SB SJCET</h1>
-					<h2  class=" wow fadeInUp" data-wow-delay="1s" style="color:white;">Discover Your Potential
-					</h2><br>
-		<h4 class="pb-20 text-white wow fadeInUp" data-wow-delay="1.4s" >
-“As engineers, we were going to be in a position to change the world – not just study it.”				</h4><br><br>
-				<div class="wow fadeIn" data-wow-delay="1.8s">
-					<a href="#" class=" primary-btn2 header-btn text-uppercase" style="cursor:pointer">Become a Member!</a></div>
-			</div>
-		</div>
-	</div>
-</center>
-</section>
-
-		<!--<section class="banner-area relative" id="home">
+		<!-- start banner Area
+		<section class="banner-area relative" id="home">
 			<div class="overlay-bg overlay"></div>
 			<div class="container">
 				<div class="row fullscreen d-flex align-items-center justify-content-center">
@@ -139,7 +161,7 @@ background-size: cover;
 							DISCOVER YOUR POTENTIAL</h2>
 				<!--		<p class="pb-20 text-white">
 							inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women.
-						</p><br><br>
+						</p>--<br><br>
 						<div class="wow fadeInUp" data-wow-delay="1s">
 						<a href="#" class="primary-btn2 header-btn text-uppercase ">Become a Member!</a></div>
 					</div>
@@ -150,6 +172,24 @@ background-size: cover;
 			</div>
 		</section>
 		<!-- End banner Area -->
+		<section class="bgimg-1 wow fadeIn" data-wow-delay="0.8s">
+	<div id="particles-j"></div><center>
+	<div class="container">
+		<div class="fullscreen d-flex align-items-center justify-content-center">
+			<div class="banner-content ">
+				<h1 class="text-uppercase wow fadeInDown" style="white-space:nowrap;" data-wow-delay="0.7s" style="color:white;">
+					IEEE SB SJCET</h1>
+					<h1  class=" wow fadeInUp" data-wow-delay="1s" style="color:white;">Discover Your Potential
+					</h1><br>
+		<p class="pb-20 text-white wow fadeInUp" data-wow-delay="1.4s" >
+“As engineers, we were going to be in a position to change the world – not just study it.”				</p><br><br>
+				<div class="wow fadeIn" data-wow-delay="1.8s">
+					<a href="#" class=" primary-btn2 header-btn text-uppercase">Become a Member!</a></div>
+			</div>
+		</div>
+	</div>
+</center>
+</section>
 
 				<!-- Start about Area -->
 				<section class="about-area section-gap" id="about">
@@ -159,7 +199,7 @@ background-size: cover;
 								<img class="img-fluid hide-mob-view" src="img/regions.svg" alt="">
 
 							</div>
-							<div class="col-lg-6 about-right wow fadeInUp" data-wow-delay="0.5s">
+							<div class="col-lg-6 about-right wow fadeInUp" data-wow-delay="0.2s">
 								<h1 class="mob-center">
 									Why Join IEEE?
 								 </h1>
@@ -170,8 +210,8 @@ background-size: cover;
 		 community to innovate for a better future through its highly_cited publications,
 		 confereces, technology standards and proffesional amd educational activities.
 		 There are more than 417,000 IEEE members in over 160 countries around the world.
-						 </p>
-								<a href="IEEE_membership_benefits.pdf" download="IEEE Membership Benefits" target="0" class="primary-btn2 header-btn text-uppercase">Membership Benefits&ensp;<span class="lnr lnr-download" style="font-weight:bold"></span></a>
+	 </p>
+								<a href="IEEE_membership_benefits.pdf" download="IEEE Membership Benefits" target="0" class="primary-btn2 header-btn mob-center text-uppercase">Membership Benefits&ensp;<span class="lnr lnr-download" style="font-weight:bold"></span></a>
 							</div>
 						</div>
 					</div>
@@ -331,24 +371,45 @@ background-size: cover;
 									<img  src="img/b1.jpg" alt="">
 								</div>
 								<p class="date">10 Jan 2018</p>
-								<h4>Event No.1</h4>
-								
+								<h4><a href="#">Addiction When Gambling
+								Becomes A Problem</a></h4>
+								<p>
+									inappropriate behavior ipsum dolor sit amet, consectetur.
+								</p>
+								<div class="meta-bottom d-flex justify-content-between">
+									<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+									<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-6 single-blog wow fadeInUp" data-wow-delay="0.5s">
 								<div class="thumb">
 									<img  src="img/b2.jpg" alt="">
 								</div>
 								<p class="date">10 Jan 2018</p>
-								<h4>Event No.2</h4>
-								
+								<h4><a href="#">Addiction When Gambling
+								Becomes A Problem</a></h4>
+								<p>
+									inappropriate behavior ipsum dolor sit amet, consectetur.
+								</p>
+								<div class="meta-bottom d-flex justify-content-between">
+									<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+									<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-6 single-blog wow fadeInUp" data-wow-delay="0.8s">
 								<div class="thumb">
 									<img c src="img/b3.jpg" alt="">
 								</div>
 								<p class="date">10 Jan 2018</p>
-								<h4>Event No.3</h4>
-								
+								<h4><a href="#">Addiction When Gambling
+								Becomes A Problem</a></h4>
+								<p>
+									inappropriate behavior ipsum dolor sit amet, consectetur.
+								</p>
+								<div class="meta-bottom d-flex justify-content-between">
+									<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+									<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+								</div>
 							</div>
 							<!--<div class="col-lg-3 col-md-6 single-blog">
 								<div class="thumb">
@@ -372,24 +433,45 @@ background-size: cover;
 									<img  src="img/b1.jpg" alt="">
 								</div>
 								<p class="date">10 Jan 2018</p>
-								<h4>Event No.4</h4>
-								
+								<h4><a href="#">Addiction When Gambling
+								Becomes A Problem</a></h4>
+								<p>
+									inappropriate behavior ipsum dolor sit amet, consectetur.
+								</p>
+								<div class="meta-bottom d-flex justify-content-between">
+									<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+									<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-6 single-blog  wow fadeInUp" data-wow-delay="0.5s">
 								<div class="thumb">
 									<img  src="img/b2.jpg" alt="">
 								</div>
 								<p class="date">10 Jan 2018</p>
-								<h4>Event No.5</h4>
-								
+								<h4><a href="#">Addiction When Gambling
+								Becomes A Problem</a></h4>
+								<p>
+									inappropriate behavior ipsum dolor sit amet, consectetur.
+								</p>
+								<div class="meta-bottom d-flex justify-content-between">
+									<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+									<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-6 single-blog wow fadeInUp" data-wow-delay="0.8s">
 								<div class="thumb">
 									<img c src="img/b3.jpg" alt="">
 								</div>
 								<p class="date">10 Jan 2018</p>
-								<h4>Event No.6</h4>
-								
+								<h4><a href="#">Addiction When Gambling
+								Becomes A Problem</a></h4>
+								<p>
+									inappropriate behavior ipsum dolor sit amet, consectetur.
+								</p>
+								<div class="meta-bottom d-flex justify-content-between">
+									<p><span class="lnr lnr-heart"></span> 15 Likes</p>
+									<p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+								</div>
 							</div>
 							<!--<div class="col-lg-3 col-md-6 single-blog">
 								<div class="thumb">
@@ -433,7 +515,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Mr.Arun P</h4>
 								<p>BRANCH COUNSELOR</p>
-								Assistant Professor (ECE)
+								Assistant Professor (ECE Department)
 							</p>
 							</div>
 						</div>
@@ -445,7 +527,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Akshay Ajith</h4>
 								<p>CHAIRMAN</p>
-								CSE
+								Computer Science & Engineering Department
 							</p>
 							</div>
 						</div>
@@ -457,7 +539,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Adorn Kurian</h4>
 								<p>VICE CHAIR</p>
-								ME
+								Mechanical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -469,7 +551,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Tessin Treesa</h4>
 								<p>SECRETARY</p>
-								EEE
+								Electronics & Electrical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -481,7 +563,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Sanjo Siby</h4>
 								<p>PES CHAIR & TECH COORDINATOR</p>
-								EEE
+								Electronics & Electrical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -493,7 +575,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Agin Sebastian</h4>
 								<p>CS CHAIR</p>
-								CSE
+								Computer Science & Engineering Department
 							</p>
 							</div>
 						</div>
@@ -505,7 +587,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Dennis Kuriakose Santhosh</h4>
 								<p>IAS CHAIR</p>
-								ME
+								Mechanical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -517,7 +599,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Ashitha Andrews</h4>
 								<p>WIE CHAIR</p>
-								CSE
+								Computer Science & Engineering Department
 							</p>
 							</div>
 						</div>
@@ -529,7 +611,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Anna Tomy</h4>
 								<p>MDC</p>
-							ECE
+							Electronics & Communications Engineering Department
 							</p>
 							</div>
 						</div>
@@ -541,7 +623,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Akhil Francis</h4>
 								<p>PROGRAM COORDINATOR</p>
-								ME
+								Mechanical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -557,7 +639,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Elsa Cherian</h4>
 								<p>EC COORDINATOR</p>
-								ECE
+								Electronics & Communications Department
 							</p>
 							</div>
 						</div>
@@ -569,7 +651,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Poly Ben Antony</h4>
 								<p>TREASURER</p>
-								EEE
+								Electronics & Electrical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -581,7 +663,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Angitha Maria</h4>
 								<p>JOINT SECRETARY</p>
-								ECE
+								Electronics & Communications Engineering Department
 							</p>
 							</div>
 						</div>
@@ -593,7 +675,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Shinu Shaju</h4>
 								<p>LINK REP</p>
-								CSE
+								Computer Science & Engineering Department
 							</p>
 							</div>
 						</div>
@@ -605,7 +687,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Sajan Joseph</h4>
 								<p>PES SECRETARY</p>
-								EEE
+								Electronics & Electrical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -617,7 +699,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Joseph Sanchin</h4>
 								<p>CS SECRETARY</p>
-								CSE
+								Computer Science & Engineering Department
 							</p>
 							</div>
 						</div>
@@ -629,7 +711,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Ashna Saji</h4>
 								<p>WIE SECRETARY</p>
-								CSE
+								Computer Science & Engineering Department
 							</p>
 							</div>
 						</div>
@@ -641,7 +723,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Vishnu K</h4>
 								<p>ATC</p>
-								ECE
+								Electronics & Communication Engineering Department
 							</p>
 							</div>
 						</div>
@@ -653,7 +735,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Ashik K Biju</h4>
 								<p>MDC</p>
-							ME
+							Mechanical Engineering Department
 							</p>
 							</div>
 						</div>
@@ -665,7 +747,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Alen Raju</h4>
 								<p>WIE MDC</p>
-								AEI
+								Applied Electronics & Instrumentation Department
 							</p>
 							</div>
 						</div>
@@ -677,7 +759,7 @@ background-size: cover;
 								<p>
 								<h4 mt-30>Jasmine Joseph</h4>
 								<p>WIE TECH SECRETARY</p>
-								ECE
+								Electronics & Communication Engineering Department
 							</p>
 							</div>
 						</div>
@@ -821,14 +903,14 @@ background-size: cover;
 				<!-- End price Area -->
 
 
-				<!-- Start team Area
+				<!-- Start team Area -->
 				<section class="team-area section-gap" id="team">
 					<div class="container">
 						<div class="row d-flex justify-content-center">
 							<div class="menu-content pb-70 col-lg-8">
 								<div class="title text-center">
-									<h1 class="mb-10">UPCOMING EVENTS</h1>
-		
+									<h1 class="mb-10">About Creative Agency Team</h1>
+									<p>Who are in extremely love with eco friendly system.</p>
 								</div>
 							</div>
 						</div>
@@ -905,7 +987,7 @@ background-size: cover;
 								</div></div>
 								<div class="col-lg-4  wow fadeIn ">
 								<div class="single-img">
-									<center><img  src="img/ieee-kerala.png" alt="" style="height:100px;width:70%;"></center>
+								<center>	<img  src="img/ieee-kerala.png" alt="" style="height:100px;width:70%;"></center>
 								</div></div>
 								<div class="col-lg-4  wow fadeIn">
 								<div class="single-img">
@@ -953,10 +1035,9 @@ background-size: cover;
 		<footer class="footer-area" id="contact">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4  col-md-12 wow fadeInUp">
+					<div class="col-lg-4  col-md-12 ">
 						<div class="single-footer-widget ">
 							<h4 style="color:white;font-weight:bold">CONTACT US</h4><br><p>
-
 									<font style="font-weight:bold;font-size:16px;">Address</font><br>
 									St. Joseph's <br>College
 									of Enginnering and Technology,<br> Palai
@@ -994,7 +1075,7 @@ background-size: cover;
 							</div>-->
 						</div>
 					</div>
-					<div class="col-lg-4  col-md-12 wow fadeInUp" data-wow-delay="0.35s">
+					<div class="col-lg-4  col-md-12 " data-wow-delay="0.35s">
 						<div class="single-footer-widget">
 							<h4 style="color:white;font-weight:bold">IMPORTANT LINKS</h4><br>
 							<ul class="footer-nav" >
@@ -1009,7 +1090,7 @@ background-size: cover;
 						</div>
 					</div>
 
-					<div class="col-lg-4  col-md-12 wow fadeInUp" data-wow-delay="0.7s">
+					<div class="col-lg-4  col-md-12 wow " data-wow-delay="0.7s">
 						<div class="single-footer-widget mail-chimp">
 							<h4 style="color:white;font-weight:bold">COMING EVENTS</h4><br>
 							<ul class="instafeed d-flex flex-wrap">
@@ -1033,7 +1114,7 @@ background-size: cover;
 			<center style="color:white;">Copyright &copy;<script>document.write(new Date().getFullYear());</script><br>
 				<!--<br> This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>-->
 			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			Designed & Developed by <a href="http://shinushaju.me" target="0" style="text-decoration:underline;text-decoration-style:dotted;color:#ff3814;font-weight:bold">Shinu Shaju</a>
+			Designed & Developed by <a href="http://shinushaju.me" target="0" style="text-decoration:underline;text-decoration-style:dotted;color:#fa3b19;font-weight:bold">Shinu Shaju</a>
 		</div>
 		<!-- End footer Area -->
 
@@ -1051,7 +1132,9 @@ background-size: cover;
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/main.js"></script>
 
-		
+		<script>
+		new WOW().init();
+		</script>
 
 	</body>
 </html>
