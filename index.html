@@ -57,14 +57,58 @@ background: url("sb4.jpg") no-repeat center center ;
 background-size: cover;
 margin-top: 0;
 }
+	.centered{
+	width:300px;
+	height:300px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	background:#fff;
+	filter: blur(10px) contrast(20);
+}
+.blob-1,.blob-2{
+	width:50px;
+	height:50px;
+	position:absolute;
+	background:red;
+	border-radius:50%;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+}
+.blob-1{
+	left:20%;
+	animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+	left:80%;
+	animation:osc-r 2.5s ease infinite;
+	background:#262626;
+}
+@keyframes osc-l{
+	0%{left:20%;}
+	50%{left:50%;}
+	100%{left:20%;}
+}
+@keyframes osc-r{
+	0%{left:80%;}
+	50%{left:50%;}
+	100%{left:80%;}
+}
 </style>
-
+		<script>
+		$(window).load(function(){
+     $('.centered').fadeOut()});
+		</script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 <body>
 
 		<!-- Start Header Area -->
-
+	<div class = "centered">
+	  	<div class = "blob-1"></div>
+	  	<div class = "blob-2"></div>
+	  </div>
 		<header class="default-header">
 			<!--<div class="menutop-wrap" >
 				<div class="menu-top container">
