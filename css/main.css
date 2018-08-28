@@ -1,6 +1,4 @@
-.wow {
-    visibility: hidden;
-}
+
 /*--------------------------- Color variations ----------------------*/
 /* Medium Layout: 1280px */
 /* Tablet Layout: 768px */
@@ -2228,7 +2226,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 800px) {
   .banner-content h1 {
-      font-size: 27px;
+      font-size: 29px;
   }
 }
 @media (max-width: 800px) {
@@ -2283,7 +2281,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 800px) {
   .single-service {
     margin-bottom: 50px;
-  
+
   }
 }
 
@@ -2661,6 +2659,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color:#1b1b1b;
 }
 
+.footer-area2 {
+  padding-top: 50px;
+  background-color:#1b1b1b;
+}
 .footer-area .footer-nav li {
   margin-top: 8px;
 }
@@ -2684,19 +2686,31 @@ h6 {
   color: #f54349;
 }
 
-.instafeed {
-  margin: -5px;
-}
 
-.instafeed li {
+.ieeeevents li {
   overflow: hidden;
   width: 25%;
+  margin-bottom: 5px;
 }
 
-.instafeed li img {
-  margin: 5px;
+.ieeeevents li img {
+margin: -5px;
+height:90px;
+width:100%;
 }
 
+@media (max-width: 800px) {
+  .ieeeevents li {
+    overflow: hidden;
+    width: 25%;
+    margin-bottom: 5px;
+  }
+  .ieeeevents li img {
+  margin: -5px;
+  height:90px;
+  width:100%;
+  }
+}
 .footer-social {
   text-align: right;
 }
@@ -2923,3 +2937,42 @@ h6 {
   background-color:#383838;
   border-radius: 50%;
 }
+.wow {
+    visibility: hidden;
+}
+.ieee_logo{
+  height: 120px;
+  width: 250px;
+}
+@media (max-width: 800px) {
+  .ieee_logo{
+    height: 90px;
+    width: 180px;
+  }
+}
+
+    .containermin {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 20px;
+        height: 2px;
+        padding: 0;
+        background-color:#232323;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 4px);
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+
+    .change .bar2 {opacity: 0;}
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(0px, 0px);
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
