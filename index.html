@@ -48,7 +48,69 @@
 					 	    x.classList.toggle("change");
 					 	}
 					 	</script>
+						<script>
+						var myVar;
+
+						function myFunction() {
+						    myVar = setTimeout(showPage, 7000);
+						}
+
+						function showPage() {
+						  document.getElementById("cen").style.display = "none";
+						  document.getElementById("myDiv").style.display = "block";
+						}
+						</script>
+
+
 <style>
+
+#myDiv{
+	display: none;
+	text-align: center;
+}
+/*  begin bounce css */
+
+  .bounce {
+
+   width: 80px;
+   height: 30px;
+   top: 50%;
+   left: 50%;
+   transform:translate(-50%,-50%);
+
+   position: absolute;
+
+   background: white;
+  }
+
+  .bounce>div {
+   width: 18px;
+   height: 18px;
+   background-color:  #0066ff;
+   border-radius: 100%;
+   display: inline-block;
+   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  .bounce .bounce1 {
+   animation-delay: -0.32s;
+  }
+
+  .bounce .bounce2 {
+   animation-delay: -0.16s;
+  }
+
+  @keyframes sk-bouncedelay {
+   0%,
+   80%,
+   100% {
+    transform: scale(0);
+   }
+   40% {
+    transform: scale(1.0);
+   }
+  }
+
 .bgimg-1 {
 background: url("sb4.jpg") no-repeat center center ;
 -webkit-background-size: cover;
@@ -57,92 +119,19 @@ background: url("sb4.jpg") no-repeat center center ;
 background-size: cover;
 margin-top: 0;
 }
-$spinnerSpeed: 3s;
-$doneSpeed: 3.1s;
-$shadow: darken(#2ec079, 3%);
-
-
-
-.loader-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-  &:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 50%; background: #2ec079; z-index: -1; transition: top 1.2s linear $doneSpeed; }
-  &:after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: #2ec079; z-index: -1; transition: bottom 1.2s linear $doneSpeed; }
-  
-  &.done {
-    &:before { top: -50%; }
-    &:after { bottom: -50%; }
-  }
-}
-
-.progress { position: absolute; top: 50%; left: 50%;transform: translateX(-50%) translateY(-50%); transform-origin: center;
-  .progress__item {
-    text-align: center; width: 100px; height: 100px; line-height: 100px; border: 2px solid #fff; border-radius: 50%;
-    
-    &:before { content: ''; position: absolute; top: 0; left: 50%; margin-top: -3px; margin-left: 0px; width: 45px; height: 45px; border-top: solid 10px #fff; border-right: solid 10px #fff; border-top-right-radius: 100%; transform-origin: left bottom; 
-      -webkit-animation:spin $spinnerSpeed linear infinite; }
-  }
-  
-  &.float { 
-    .progress__item {
-      &:before { border-top-width: 2px; margin-top: 0px; height: 50px;  }
-    }
-    &.shadow {
-      &:before { border-top-width: 2px; margin-top: -41px; height: 50px;  }
-    }
-  }
-  
-  &.shadow {
-    &:before { content: ''; position: absolute; top: 50%; left: 50%; margin: -43px 0 0 12px; width: 45px; height: 45px; border-top: solid 10px $shadow; border-right: solid 10px $shadow; border-top-right-radius: 100%; z-index: -1; transform-origin: left bottom; 
-      -webkit-animation:spin $spinnerSpeed linear infinite; }
-    
-    &:after { content: ''; position: absolute; top: 50%; left: 50%; width: 100px; height: 100px; color: $shadow; text-align: center; line-height: 100px; border: 2px solid $shadow; border-radius: 50%; margin: -40px 0 0 -40px; z-index: -1; transform-origin: center; }
-    
-  }
-  
-  &.done {
-    .progress__item { opacity: 0; -webkit-animation: done $doneSpeed; transition: opacity .3s linear $doneSpeed; 
-      &:before { display: none; }
-    }
-    &:before { display: none; }
-    &:after { opacity: 0; -webkit-animation: done $doneSpeed; transition: opacity .15s linear $doneSpeed; }
-  }
-}
-
-
-@-webkit-keyframes done {
-    10%  { transform: scale(1.10); }
-    20%  { transform: scale(0.90); }
-    30%  { transform: scale(1.07); }
-    40%  { transform: scale(0.93); }
-    50%  { transform: scale(1.04);}
-    60%  { transform: scale(0.97);}
-    80%  { transform: scale(1.01);}
-    90%  { transform: scale(0.99);}
-    100% { transform: scale(1);} 
-}
-
-@-webkit-keyframes spin {
-    100% { -webkit-transform: rotate(360deg); }
-}
 </style>
-		<script>
-		setTimeout(function () {
-  
-  $('.loader-container').addClass('done');
-  $('.progress').addClass('done');
-  
-}, 7500);
-		</script>
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
-<body>
-
+<body onload="myFunction()">
+	<div class="bounce" id="cen">
+	 <div class="bounce1"></div>
+	 <div class="bounce2"></div>
+	 <div class="bounce3"></div>
+	</div>
 		<!-- Start Header Area -->
-	<div class="loader-container">
-  <div class="progress float shadow">
-    <div class="progress__item"></div>
-  </div>
-</div>
-		<header class="default-header">
+  <div id="myDiv" style="display:none;">
+		<header class="default-header" >
 			<!--<div class="menutop-wrap" >
 				<div class="menu-top container">
 					<div class="d-flex justify-content-between align-items-center" >
@@ -229,9 +218,9 @@ $shadow: darken(#2ec079, 3%);
 					IEEE SB SJCET</h1>
 					<h1  class=" wow fadeInUp" data-wow-delay="1s" style="color:white;">Discover Your Potential
 					</h1><br>
-		<p class="text-white wow fadeInUp" data-wow-delay="1.6s" >
+		<p class="text-white wow fadeInUp" data-wow-delay="1.4s" >
 “As engineers, we were going to be in a position to change the world – not just study it.”				</p><br><br>
-				<div class="wow fadeIn" data-wow-delay="2s">
+				<div class="wow fadeIn" data-wow-delay="1.8s">
 					<a href="#" class=" primary-btn2 header-btn text-uppercase">Become a Member!</a></div>
 			</div>
 		</div>
@@ -278,7 +267,7 @@ $shadow: darken(#2ec079, 3%);
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s" >
+					<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s" >
 						<div class="single-service">
 							<span class="lnr lnr-heart"></span>
 							<h4 class="pt-60 pb-20">Community Benefits</h4>
@@ -287,7 +276,7 @@ $shadow: darken(#2ec079, 3%);
 							</p>
 						</div>
 					</div>
-					<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
+					<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="single-service">
 							<span class="lnr lnr-graduation-hat"></span>
 							<h4 class="pt-60 pb-20">Access to IEEE Resources</h4>
@@ -297,7 +286,7 @@ $shadow: darken(#2ec079, 3%);
 							</p>
 						</div>
 					</div>
-					<div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
+					<div class="col-lg-4 wow fadeInUp" data-wow-delay="0.9s">
 						<div class="single-service">
 							<span class="lnr lnr-diamond"></span>
 							<h4 class="pt-60 pb-20">Career Growth</h4>
@@ -460,27 +449,24 @@ $shadow: darken(#2ec079, 3%);
 						</div><br><br>
 						<div class="row">
 							<div class="col-lg-4 col-md-6 single-blog wow fadeInUp" data-wow-delay="0.3s">
-								<div class="thumb">
 								<img  src="img/pesday.jpg" style="height:220px;width:100%;" alt="">
-								</div>
+
 								<p>
 								<h4>PES Day Celebrations</h4></p>
 								<p class="date">10 Jan 2018</p>
 
 							</div>
 							<div class="col-lg-4 col-md-6 single-blog  wow fadeInUp" data-wow-delay="0.5s">
-										<div class="thumb">
+
 									<img  src="img/gha.jpg" style="height:220px;width:100%;" alt="">
-								</div>
+
 								<p>
 								<h4>Session for Grace Hopper Aspirants</h4></p>
 								<p class="date">10 Jan 2018</p>
 							</div>
 							<div class="col-lg-4 col-md-6 single-blog wow fadeInUp" data-wow-delay="0.8s">
-								<div class="thumb">	
-								<img src="img/pes-tech-talk.jpg" style="height:220px;width:100%;"alt="">
-								</div>
-									<p>
+									<img src="img/pes-tech-talk.jpg" style="height:220px;width:100%;"alt="">
+								<p>
 								<h4>Tech Talk on Electrical Power Grids</h4></p>
 								<p class="date">18 Aug 2018</p>
 
@@ -783,7 +769,6 @@ $shadow: darken(#2ec079, 3%);
 		</section>
 		<!-- End testimonial Area -->
 
-
 				<!-- Start price Area -->
 				<section class="price-area section-gap" id="dues">
 					<div class="container">
@@ -910,8 +895,7 @@ $shadow: darken(#2ec079, 3%);
 							</div>
 
 							</div>
-						</div>
-					</div>
+
 				</section>
 				<!-- End price Area -->
 
@@ -1010,42 +994,8 @@ $shadow: darken(#2ec079, 3%);
 					</div>
 				</section>
 				<!-- End brand Area -->
-
-		<!-- start contact Area
-		<section class="contact-area section-gap" id="contact">
-			<div class="container">
-				<div class="row d-flex justify-content-center">
-					<div class="menu-content pb-30 col-lg-8">
-						<div class="title text-center">
-							<h1 class="mb-10">Contact Us</h1>
-							<p>Who are in extremely love with eco friendly system.</p>
-						</div>
-					</div>
-				</div>
-				<form class="form-area mt-60" id="myForm" action="mail.php" method="post" class="contact-form text-right">
-					<div class="row">
-					<div class="col-lg-6 form-group">
-						<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-
-						<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
-
-						<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
-					</div>
-					<div class="col-lg-6 form-group">
-						<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-						<button class="primary-btn mt-20">Send Message<span class="lnr lnr-arrow-right"></span></button>
-						<div class="alert-msg">
-					</div>
-					</div></div>
-				</form>
-
-			</div>
-		</section>
-		<!-- end contact Area -->
-
-
 		<!-- start footer Area -->
-		<footer class="footer-area pb-20" id="contact">
+		<footer class="footer-area" id="contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4  col-md-12" style="padding-top:20px;">
@@ -1065,27 +1015,6 @@ $shadow: darken(#2ec079, 3%);
 									<a href="#"><i class="fa fa-facebook"></i></a>&ensp;
 									<a href="#"><i class="fa fa-instagram"></i></a>
 								</p>
-
-							<!--<img  src="img/sjcet-logo.jpg"  style="height:100%;width:100%;"alt="IEEE-logo">-->
-
-							<!--<div id="mc_embed_signup">
-								<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-
-									<div class="form-group row" style="width: 100%">
-										<div class="col-lg-8 col-md-12">
-											<input name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
-											<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-										</div>
-
-										<div class="col-lg-4 col-md-12">
-											<button class="nw-btn primary-btn">Subscribe<span class="lnr lnr-arrow-right"></span></button>
-										</div>
-									</div>
-									<div class="info"></div>
-								</form>
-							</div>-->
 						</div>
 					</div>
 					<div class="col-lg-4  col-md-12 " style="padding-top:20px;">
@@ -1127,7 +1056,7 @@ $shadow: darken(#2ec079, 3%);
 			Designed & Developed by <a href="http://shinushaju.me" target="0" style="text-decoration:underline;text-decoration-style:dotted;color:#fa3b19;font-weight:bold">Shinu Shaju</a>
 		</div>
 		<!-- End footer Area -->
-
+	</div>
 		<script src="js/vendor/jquery-2.2.4.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="js/vendor/bootstrap.min.js"></script>
@@ -1141,6 +1070,10 @@ $shadow: darken(#2ec079, 3%);
 		<script src="js/jquery.sticky.js"></script>
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/main.js"></script>
+
+		<script>
+
+		</script>
 
 	</body>
 </html>
