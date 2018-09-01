@@ -2989,3 +2989,24 @@ width:100%;
     font-size: 20px;
   }
 }
+.carousel {
+  background: white;
+
+}
+
+.carousel-cell {
+
+  width: 33.33%;
+  height: auto;
+  margin-right: 10px;
+  background:white;
+  border-radius: 5px;
+
+}
+@media (max-width: 600px) {
+
+
+  .carousel-cell {
+    width: 100%;
+}
+}
