@@ -3004,9 +3004,14 @@ width:100%;
 
 }
 @media (max-width: 600px) {
+  .carousel {
+    background: white;
+    width: 100%;
 
+  }
 
   .carousel-cell {
     width: 100%;
+      margin-right: 0px;
 }
 }
